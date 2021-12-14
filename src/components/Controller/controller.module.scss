@@ -1,7 +1,8 @@
 .searchController {
   position: fixed;
   bottom: 15px;
-  width: 350px;
+  left: 50%;
+  transform: translateX(calc(-50% - 20px));
   input {
     padding: 8px 20px 8px 20px;
     border: none;

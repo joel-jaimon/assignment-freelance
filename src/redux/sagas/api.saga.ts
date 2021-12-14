@@ -5,7 +5,7 @@ const getData = async (pageIndex: number) => {
   try {
     console.log(pageIndex);
     const res = await fetch(
-      `${process.env.REACT_APP_API_ENDPOINT}?page=${pageIndex}&limit=30`
+      `${process.env.REACT_APP_API_ENDPOINT}?page=${pageIndex}&limit=100`
     );
     const data = await res.json();
     return data;

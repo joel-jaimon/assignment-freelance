@@ -1,17 +1,13 @@
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
 import s from "./App.module.scss";
-import { getImages } from "./redux/reducers/general";
+import { MainLayout } from "./layouts/MainLayout";
+import { Home } from "./pages/Home/Home";
 
 const App = () => {
-  const [pageIndex, setPageIndex] = useState(1);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getImages(pageIndex));
-  }, []);
-
-  return <div className={s.App} />;
+  return (
+    <MainLayout className={s.App}>
+      <Home />
+    </MainLayout>
+  );
 };
 
 export default App;
